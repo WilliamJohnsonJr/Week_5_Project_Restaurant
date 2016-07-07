@@ -19,37 +19,6 @@ header {
   align-items: center;
   justify-content: space-around;
 }
-
-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.photoContainer {
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
-#three {
-  width: 100%;
-  position: absolute;
-  top: -240px;
-}
-
-.feedsContainer {
-  display: flex;
-  flex-direction: row;
-}
-
-.contentContainer {
-  display: flex;
-  flex-direction: row;
-}
-
 .logo {
   width: 300px;
   display: flex;
@@ -100,4 +69,51 @@ nav {
 
 #openTableLogo {
   width: 100px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.photoContainer {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#three {
+  width: 100%;
+  position: absolute;
+  top: -240px;
+}
+
+.feedsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#four {
+  display: flex;
+  flex-direction: column;
+  max-width: 33.3333%;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    font-weight: bold;
+  }
+}
+
+#five,
+#six {
+  max-width: 33.3333%
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
 }

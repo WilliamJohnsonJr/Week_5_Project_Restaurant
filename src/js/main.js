@@ -1,6 +1,7 @@
 import $ from "jquery"
 import {key} from "./secrets.js"
 import {news} from "./news.js"
+import {locationHTML} from "./location.js"
 
 var baseURL = `https://api.flickr.com/services/`
 

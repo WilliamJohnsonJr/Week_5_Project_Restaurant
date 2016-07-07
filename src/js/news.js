@@ -8,12 +8,12 @@ var news = {
 }
 
 
-var newsHTML = `<p>Latest News</p>
+var newsHTML = `<p class="latest">Latest News</p>
  <div class="row">
  <p>${news.title}</p>
- <p>${news.date_published}</p>
+ <p class="r">${news.date_published}</p>
  </div>
- <p>${news.post}</p>`
+ <p class="newsPost">${news.post}</p>`
 
 
 $('#four').append(newsHTML)

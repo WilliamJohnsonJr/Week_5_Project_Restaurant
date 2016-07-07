@@ -10,12 +10,14 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 1200px;
   margin: 0 auto;
 }
 
 header {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 nav {
@@ -26,10 +28,16 @@ nav {
   flex-direction: column;
 }
 
+.photoContainer {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
 #three {
-  width: 80%;
-  height: 200px;
-  margin-left: 10%;
+  width: 100%;
+  position: absolute;
+  top: -240px;
 }
 
 .feedsContainer {
@@ -43,8 +51,8 @@ nav {
 }
 
 .logo {
+  width: 300px;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -55,4 +63,41 @@ nav {
 
 .logoImg {
   height: 70px;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  background: #F7F7F7;
+  border: 1px solid lightgray;
+  width: 380px;
+  height: 75px;
+   p {
+    border-width: 0 0 0 0;
+   }
+}
+
+.socialLogos{
+  border-width: 0 0 0 0;
+}
+
+#fbLogo{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+#twitterLogo {
+  height: 50px;
+  width: 50px;
+  margin-right: 25px;
+}
+
+#instagramLogo{
+  height: 50px;
+  width: 50px;
+  margin-right: 25px;
+}
+
+#openTableLogo {
+  width: 100px;
 }

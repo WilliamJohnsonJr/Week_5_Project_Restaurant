@@ -16,6 +16,8 @@ body {
 
 header {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 nav {
@@ -43,8 +45,8 @@ nav {
 }
 
 .logo {
+  width: 300px;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -57,14 +59,37 @@ nav {
   height: 70px;
 }
 
+.social{
+  display: flex;
+  align-items: center;
+  background: #F7F7F7;
+  border: 1px solid lightgray;
+  width: 380px;
+  height: 75px;
+   p {
+    border-width: 0 0 0 0;
+   }
+}
+
+.socialLogos{
+  border-width: 0 0 0 0;
+}
+
+#fbLogo{
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 #twitterLogo {
   height: 50px;
   width: 50px;
+  margin-right: 25px;
 }
 
 #instagramLogo{
   height: 50px;
   width: 50px;
+  margin-right: 25px;
 }
 
 #openTableLogo {

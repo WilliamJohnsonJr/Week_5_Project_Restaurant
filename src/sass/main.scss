@@ -142,3 +142,26 @@ nav {
   display: flex;
   flex-direction: row;
 }
+
+.specials {
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+  padding-right: 18px;
+  width: 300px;
+  height: 240px;
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 263px;
+    height: 82px;
+    overflow: hidden;
+  }
+}
+
+.specialImageDiv{
+  width: 260px;
+  height: 100px;
+  background-image: url(https://c5.staticflickr.com/9/8697/16756892436_cb0c6b5c14_n.jpg);
+  background-position: 70% 50%;
+  }

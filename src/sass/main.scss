@@ -99,6 +99,7 @@ nav {
 #four {
   display: flex;
   flex-direction: column;
+  max-width: 33.3333%;
   .row {
     display: flex;
     justify-content: space-between;
@@ -107,8 +108,10 @@ nav {
   }
 }
 
-
-
+#five,
+#six {
+  max-width: 33.3333%
+}
 
 .contentContainer {
   display: flex;

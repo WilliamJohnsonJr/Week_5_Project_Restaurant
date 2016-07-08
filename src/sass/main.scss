@@ -89,7 +89,7 @@ nav {
 .feedsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #four {
@@ -174,15 +174,15 @@ nav {
   flex-direction: column;
   background: #F7F7F7;
   border: solid 1px rgb(179, 179, 179);
-  p {
-    margin: 0;
-    &.address {
+    .address {
       display: flex;
       justify-content: center;
+      font-size: 0.8em;
+      margin: 10px 0;
     }
-  }
   ul {
     padding: 0;
+    margin: 10px 0;
     display: flex;
     justify-content: space-around;
     .first {
@@ -191,6 +191,20 @@ nav {
     li {
       font-size: 0.7em;
     }
+  }
+  .iframe {
+    max-width: 100%;
+    margin: 10px 10px;
+    border: solid 1px rgb(179, 179, 179);
+  }
+  iframe {
+    max-width: 100%;
+  }
+  h4 {
+    padding: 5px 0 5px 5px;
+    margin: 3px;
+    font-size: 1em;
+    border-bottom: solid 1px rgb(179, 179, 179);
   }
 }
 

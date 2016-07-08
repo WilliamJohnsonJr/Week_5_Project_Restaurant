@@ -1,8 +1,9 @@
+
 import $ from "jquery"
 import {key} from "./secrets.js"
 import {news} from "./news.js"
 import {locationHTML} from "./location.js"
-
+import {getSpecial} from "./specials"
 var baseURL = `https://api.flickr.com/services/`
 
 function get() {
@@ -11,3 +12,5 @@ function get() {
   }).then(function(things) {
   });
 };
+
+getSpecial();

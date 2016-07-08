@@ -299,6 +299,48 @@ nav {
   }
 }
 
+.reservations {
+  form {
+    display: flex;
+    flex-direction: column;
+    #fullName,
+    #guests,
+    #date,
+    #notes,
+    #reserveTable {
+      border-radius: 3px;
+      border: solid 1px rgb(221,221,221)
+    }
+    #fullName {
+      width: 350px;
+      height: 35px;
+    }
+    #guests {
+      width: 150px;
+      height: 35px;
+    }
+    #date {
+      width: 250px;
+      height: 35px;
+    }
+    #notes {
+      width: 400px;
+      height: 80px;
+    }
+    select {
+      width: 100px;
+    }
+    #reserveTable {
+      height: 40px;
+      width: 140px;
+      color: white;
+      background-color: black;
+      border: none;
+    }
+
+  }
+}
+
 #eight {
   img {
     width: 216px;

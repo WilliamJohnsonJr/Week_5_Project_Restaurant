@@ -2,23 +2,23 @@
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  border: solid black 1px;
-}
-
-body {
-  position: relative;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .container {
-  width: 1200px;
+  width: 950px;
   margin: 0 auto;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 30px 0 0 0;
 }
+
+
 .logo {
   width: 300px;
   display: flex;
@@ -27,7 +27,7 @@ header {
 
 .logo h1 {
   font-family: 'Poiret One', cursive;
-  font-size: 43px;
+  font-size: 2em;
 }
 
 .logoImg {
@@ -37,52 +37,47 @@ header {
 .social{
   display: flex;
   align-items: center;
-  background: #F7F7F7;
+  justify-content: space-around;
+  background: rgb(235,235,235);
   border: 1px solid lightgray;
-  width: 380px;
+  width: 200px;
   height: 75px;
-   p {
-    border-width: 0 0 0 0;
-   }
 }
 
-.socialLogos{
-  border-width: 0 0 0 0;
-}
-
-#fbLogo{
-  margin-left: 25px;
-  margin-right: 25px;
-}
-
-#twitterLogo {
-  height: 50px;
-  width: 50px;
-  margin-right: 25px;
-}
-
+#fbLogo,
+#twitterLogo,
 #instagramLogo{
-  height: 50px;
-  width: 50px;
-  margin-right: 25px;
+  width: 30px;
 }
 
 #openTableLogo {
-  width: 100px;
+  width: 50px;
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 10px;
   display: flex;
   flex-direction: column;
+  a {
+    text-decoration: none;
+    font-size: 0.8em;
+    &:first-child {
+      margin-top: 10px;
+    }
+    &:last-child {
+      margin-top: 15px;
+    }
+  }
 }
+
 
 .photoContainer {
   height: 300px;
   overflow: hidden;
   position: relative;
+  margin: 30px 0;
 }
 
 #three {
@@ -100,10 +95,11 @@ nav {
 #four {
   display: flex;
   flex-direction: column;
-  max-width: 33.3333%;
   overflow: hidden;
-  width: 300px;
+  max-width: 300px;
   height: 240px;
+  background: rgb(235,235,235);
+  border: solid 1px rgb(179, 179, 179);
   p {
     margin: 0;
     font-size: 0.8em;
@@ -112,6 +108,7 @@ nav {
     padding: 5px 0 5px 5px;
     margin: 3px;
     font-size: 1em;
+    border-bottom: solid 1px rgb(179, 179, 179);
   }
   .row  {
     border: none;
@@ -152,6 +149,8 @@ nav {
   padding-right: 18px;
   width: 300px;
   height: 240px;
+  background: rgb(235,235,235);
+  border: solid 1px rgb(179, 179, 179);
   p {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -173,6 +172,8 @@ nav {
   height: 240px;
   display: flex;
   flex-direction: column;
+  background: #F7F7F7;
+  border: solid 1px rgb(179, 179, 179);
   p {
     margin: 0;
     &.address {
@@ -193,5 +194,7 @@ nav {
   }
 }
 
-
+#seven {
+  margin: 30px 0;
+}
 

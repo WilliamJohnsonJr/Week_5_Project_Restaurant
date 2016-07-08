@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import $ from 'jquery'
 var baseURL = `https://api.flickr.com/services/`
-=======
 import $ from "jquery";
 import _ from "lodash";
->>>>>>> master
 
 var baseURL = `https://json-data.herokuapp.com/restaurant`
 

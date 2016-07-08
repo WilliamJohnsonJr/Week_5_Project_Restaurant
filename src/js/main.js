@@ -1,7 +1,7 @@
 import $ from "jquery";
 import {key} from "./secrets.js";
 import {news} from "./news.js";
-import {getSpecials} from "./specials";
+import { menus } from "./specials";
 var baseURL = `https://api.flickr.com/services/`
 
 function get() {
@@ -10,5 +10,3 @@ function get() {
   }).then(function(things) {
   });
 };
-
-getSpecials();

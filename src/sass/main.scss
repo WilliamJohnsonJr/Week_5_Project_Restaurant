@@ -179,11 +179,19 @@ nav {
 }
 
 .todaysSpecial {
-    padding-top: 5px;
-    padding-bottom: 16px;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 31px;
+    margin-left: -8px;
+    margin-right: -8px;
     margin-bottom: 3px;
     font-size: 1em;
-    border-bottom: solid 1px rgb(179, 179, 179);
+    border-bottom: solid 1px #b3b3b3;
+    font-weight: bold;
+}
+.specialLineContainer{
+  position: relative;
 }
 
 .specialLine{
@@ -199,8 +207,8 @@ nav {
 .specialLine:before{
     content: '';
     position: absolute;
-    bottom: 2.8rem;
-    width: 87%;
+    bottom: 3.6rem;
+    width: 96%;
     height: 0;
     line-height: 0;
     height: 10px;
@@ -211,6 +219,7 @@ nav {
   position: relative;
   background: rgb(235,235,235);
   z-index: 1;
+  height: 12px;
 }
 
 .specialPrice{
@@ -219,6 +228,7 @@ nav {
   background: rgb(235,235,235);
   z-index: 1;
   position: relative;
+  height: 12px;
 }
 
 .specialDescription {

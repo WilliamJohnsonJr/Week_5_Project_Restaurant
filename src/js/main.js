@@ -4,6 +4,7 @@ import {news} from "./news.js"
 import {locationHTML} from "./location.js"
 import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
+// import {getImg} from "./featureImg.js"
 var baseURL = `https://api.flickr.com/services/`
 
 function get() {

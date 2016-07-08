@@ -8,7 +8,7 @@ var news = {
 }
 
 
-var newsHTML = `<p class="latest">Latest News</p>
+var newsHTML = `<h4 class="latest">Latest News</h4>
  <div class="row">
  <p>${news.title}</p>
  <p class="r">${news.date_published}</p>

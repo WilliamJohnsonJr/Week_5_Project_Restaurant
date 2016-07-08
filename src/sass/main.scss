@@ -27,7 +27,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
+  padding-bottom: 15px;
+  border-bottom: solid 1px rgb(179, 179, 179)
 }
 
 
@@ -52,8 +54,8 @@ header {
   justify-content: space-around;
   background: rgb(235,235,235);
   border: 1px solid lightgray;
-  width: 200px;
-  height: 75px;
+  width: 220px;
+  height: 71px;
 }
 
 #fbLogo,
@@ -65,6 +67,12 @@ header {
 #openTableLogo {
   width: 50px;
 }
+
+#fbLogo,
+#openTableLogo {
+  border-radius: 3px;
+}
+
 
 nav {
   position: fixed;

@@ -1,3 +1,4 @@
+import $ from 'jquery'
 var baseURL = `https://api.flickr.com/services/`
 
 function getSpecials() {

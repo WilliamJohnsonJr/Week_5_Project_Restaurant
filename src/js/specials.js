@@ -71,9 +71,10 @@ function getSpecial (){
 		$(".specials").append(`
 			<div class=specialLineContainer>
 				<p class="specialLine"><span class="specialName">${specialObj.item}</span><span class="specialPrice">${specialObj.price}</span></p>
-				<p class="specialDescription">${specialObj.description}
-				</p>
-			</div>`);
+			</div>
+			<p class="specialDescription">${specialObj.description}
+			</p>
+			`);
 	});
   });
 };

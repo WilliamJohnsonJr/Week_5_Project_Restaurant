@@ -290,6 +290,44 @@ nav {
   }
 }
 
+.featureHeader {
+  margin-top: 30px;
+  .story,
+  .men,
+  .res {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  .story {
+    width: 125px;
+    justify-content: center;
+  }
+  .men {
+    width: 100px;
+    justify-content: center;
+  }
+  .res {
+    width: 147px;
+    justify-content: flex-start;
+    padding-left: 30px; 
+  }
+  .filler {
+    width: 288px;
+    margin: 0;
+    height: 50px;
+  }
+}
+
+.border-bottom {
+  border-bottom: solid 1px black;
+}
+
+.border-around {
+  border: solid 1px black;
+  border-bottom: none;
+}
 // .hidden {
 //   display: none;
 // }
@@ -297,7 +335,6 @@ nav {
 
 
 #seven {
-  margin: 30px 0;
   p {
     font-size: 0.8em;
     line-height: 1.8em;
@@ -321,7 +358,6 @@ nav {
 .menu,
 .reservations {
   width: 675px;
-  border: solid black 1px;
 }
 
 .ourStory {

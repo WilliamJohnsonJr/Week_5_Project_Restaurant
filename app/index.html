@@ -66,7 +66,27 @@
             
           </div>
           <div class="reservations hidden">
-            
+            <form>
+              <label for="fullName">Full Name</label>
+              <input id="fullName" type="text" name="fullName">
+              <label for="guests">Number of Guests</label>
+              <input id="guests" type="text" name="guests">
+
+              <label for="date">Date</label>
+              <input id="date" type="text" name="date">
+
+              <label for="notes">Special Notes</label>
+              <textarea id="notes"></textarea>
+
+              <label for="seating">Seating Preference</label>
+              <select>
+                <option>Indoor</option>
+                <option>Outdoor</option>
+              </select>
+              <button id="reserveTable">
+                Reserve Table
+              </button>
+            </form>
           </div>
         </div>
         </div>

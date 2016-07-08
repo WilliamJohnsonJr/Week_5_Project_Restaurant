@@ -126,8 +126,8 @@ nav {
     font-size: 0.8em;
   }
   .latest {
-    padding: 5px 0 5px 5px;
-    margin: 3px;
+    padding: 20px 10px 12px 10px;
+    margin: 0 10px;
     font-size: 1em;
     border-bottom: solid 1px rgb(179, 179, 179);
   }
@@ -136,12 +136,13 @@ nav {
     p {
       display: inline-block;
       font-weight: bold;
-      margin: 3px;
-      padding: 5px;
+      margin: 0 10px;
+      padding: 10px;
       font-style: italic;
       &.r {
         float: right;
-        padding: 5px;
+        margin: 0 10px 0 0;
+        padding: 10px;
       }
     }
   }
@@ -151,7 +152,8 @@ nav {
     -webkit-box-orient: vertical;
     text-overflow: -o-ellipsis-lastline;
     max-width: 100%;
-    margin: 3px;
+    margin: 0 10px;
+    padding: 0 10px;
     overflow: hidden;
     line-height: 1.3em;
   }
@@ -167,10 +169,10 @@ nav {
   background: rgb(235,235,235);
   border: solid 1px rgb(179, 179, 179);
   position: relative;
-  p {
-    width: 260px;
-    height: 82px;
-  }
+  // p {
+  //   width: 260px;
+  //   height: 82px;
+  // }
 }
 
 .todaysSpecial {

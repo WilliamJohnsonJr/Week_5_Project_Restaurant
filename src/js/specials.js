@@ -69,7 +69,7 @@ function getSpecial (){
 		console.log(specialObj);
 		console.log(dailySpecial);
 		$(".specials").append(`
-			<h4 class="specialName">${specialObj.item}<span class="specialPrice">...........${specialObj.price}</span></h4>
+			<p class="specialLine"><span class="specialName">${specialObj.item}</span><span class="specialPrice">${specialObj.price}</span></p>
 			<p class="specialDescription">${specialObj.description}
 			</p>`);
 	});

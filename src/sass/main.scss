@@ -148,12 +148,6 @@ nav {
   }
 }
 
-
-.contentContainer {
-  display: flex;
-  flex-direction: row;
-}
-
 .specials {
   display: flex;
   flex-direction: column;
@@ -272,28 +266,104 @@ nav {
 //   display: none;
 // }
 
-.ourStory,
-.menu,
-.reservations {
-  height: 200px;
-  width: 500px;
-  border: solid black 1px;
-}
+
 
 #seven {
   margin: 30px 0;
+  p {
+    font-size: 0.8em;
+    line-height: 1.8em;
+    letter-spacing: 0.02em;
+    padding: 0 3px;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 300;
+}
+
+.featureHeader {
+  display: flex;
+}
+
+.ourStory,
+.menu,
+.reservations {
+  width: 675px;
+  border: solid black 1px;
+}
+
+.ourStory {
+  .featureImgContainer {
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+  }
+  img {
+    position: absolute;
+    width: 100%;
+    top: -60px;
+  }
+}
+
+.reservations {
+  form {
+    display: flex;
+    flex-direction: column;
+    #fullName,
+    #guests,
+    #date,
+    #notes,
+    #reserveTable {
+      border-radius: 3px;
+      border: solid 1px rgb(221,221,221)
+    }
+    #fullName {
+      width: 350px;
+      height: 35px;
+    }
+    #guests {
+      width: 150px;
+      height: 35px;
+    }
+    #date {
+      width: 250px;
+      height: 35px;
+    }
+    #notes {
+      width: 400px;
+      height: 80px;
+    }
+    select {
+      width: 100px;
+    }
+    #reserveTable {
+      height: 40px;
+      width: 140px;
+      color: white;
+      background-color: black;
+      border: none;
+    }
+
+  }
 }
 
 #eight {
   img {
-    width: 250px;
+    width: 216px;
   }
 }
 
 .foodImgContainer {
-    width: 250px;
-    height: 160px;
+    width: 216px;
+    height: 162px;
     overflow: hidden;
+    margin: 20px 0;
+  }
+
   }
 
 .itemDescription{

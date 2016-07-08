@@ -194,7 +194,7 @@ nav {
 .specialLine:before{
     content: '';
     position: absolute;
-    bottom: 3.2rem;
+    bottom: 2.8rem;
     width: 87%;
     height: 0;
     line-height: 0;
@@ -360,6 +360,70 @@ nav {
   }
 }
 
+.itemLine:before{
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    width: 98%;
+    height: 0;
+    line-height: 0;
+    height: 10px;
+    border-bottom: 0.12rem dotted gray;
+}
+
+.itemLine{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 16px;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.itemName{
+  position: relative;
+  background: white;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: bold
+}
+
+.itemPrice{
+  font-weight: normal;
+  font-size: 12px;
+  background: white;
+  z-index: 1;
+  position: relative;
+  padding-right: 5px;
+}
+
+.itemDescription{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonsUL{
+  display: flex;
+  border: 1px solid gray;
+  border-width: 0 0 0 1px;
+  align-items: center;
+  padding-left: 16px;
+  margin-right: 3px;
+  li{
+    list-style: none;
+    margin-right: 5px;
+    background: #808080;
+    border-radius: 4px;
+    width: 18px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+  }
+}
+
+
 #eight {
   img {
     width: 216px;
@@ -372,15 +436,3 @@ nav {
     overflow: hidden;
     margin: 20px 0;
   }
-
-.itemDescription{
-  display: flex;
-  justify-content: space-between;
-}
-
-.buttonsUL{
-  display:flex;
-  li{
-    list-style: none;
-  }
-}

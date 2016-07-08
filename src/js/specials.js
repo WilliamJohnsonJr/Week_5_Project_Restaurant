@@ -43,7 +43,7 @@ function getSpecial (){
 		var specialObj;
 		var foodArray = [];
 		menus.push(pubMenu.responseJSON);
-		console.log(menus);
+		// console.log(menus);
 		var specialID = dailySpecial[0].menu_item_id;
 		var objectKeysArray = menus.map(function(object){
 			return Object.keys(object);
@@ -54,20 +54,20 @@ function getSpecial (){
 				objectValuesArray.push(object[prop]);
 			};
 		});
-		console.log(objectValuesArray);
+		// console.log(objectValuesArray);
 		objectValuesArray.forEach(function(array){
 			array.forEach(function(object){
 				foodArray.push(object);
 			});
 		});
-		console.log(foodArray);
+		// console.log(foodArray);
 		foodArray.forEach(function(object){
 			if (object.id===specialID) {
 				specialObj = object;
 			};
 		});
-		console.log(specialObj);
-		console.log(dailySpecial);
+		// console.log(specialObj);
+		// console.log(dailySpecial);
 		$(".specials").append(`
 			<h4 class="specialName">${specialObj.item}<span class="specialPrice">...........${specialObj.price}</span></h4>
 			<p class="specialDescription">${specialObj.description}

@@ -5,6 +5,7 @@ import {locationHTML} from "./location.js"
 import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
 // import {getImg} from "./featureImg.js"
+import {getDinner} from "./dinnermenu"
 var baseURL = `https://api.flickr.com/services/`
 
 function get() {
@@ -15,3 +16,4 @@ function get() {
 };
 
 getSpecial();
+getDinner();

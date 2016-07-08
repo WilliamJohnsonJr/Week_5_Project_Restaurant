@@ -6,7 +6,17 @@
   -webkit-filter: grayscale(100%);
 }
 
+@import url(http://weloveiconfonts.com/api/?family=fontawesome|maki);
 
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* maki */
+[class*="maki-"]:before {
+  font-family: 'maki', sans-serif;
+}
 
 .container {
   width: 950px;
@@ -353,3 +363,17 @@ nav {
     overflow: hidden;
     margin: 20px 0;
   }
+
+  }
+
+.itemDescription{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonsUL{
+  display:flex;
+  li{
+    list-style: none;
+  }
+}

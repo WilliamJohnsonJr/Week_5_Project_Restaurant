@@ -1,4 +1,3 @@
-var baseURL = `https://api.flickr.com/services/`
 import $ from "jquery";
 import _ from "lodash";
 
@@ -33,6 +32,7 @@ function getSpecial (){
 
 	fancyMenu.then(function(){
 		menus.push(fancyMenu.responseJSON);
+		// console.log(fancyMenu.responseJSON);
 	});
 
 	alaydisMenu.then(function(){

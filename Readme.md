@@ -8,9 +8,12 @@
 
 ##### CSS Tools
 * Used to cut off text and add ...
-  ``` 
+  ``` CSS
   display: -webkit-box;
+  
   -webkit-line-clamp: 9;
+  
   -webkit-box-orient: vertical;
+  
   text-overflow: -o-ellipsis-lastline;
   ```

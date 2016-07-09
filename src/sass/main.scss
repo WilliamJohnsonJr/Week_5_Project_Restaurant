@@ -6,6 +6,10 @@
   -webkit-filter: grayscale(100%);
 }
 
+.container{
+  position: relative;
+}
+
 @import url(http://weloveiconfonts.com/api/?family=fontawesome|maki);
 
 /* fontawesome */
@@ -522,6 +526,17 @@ nav {
 
 .itemDescription {
   padding: 0 12px 0 12px;
+}
+
+.menButtonDiv{
+    position: absolute;
+    z-index: 1;
+    height: 110px;
+    width: 247px;
+    background: lightgray;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
 }
 
 .descriptionP{

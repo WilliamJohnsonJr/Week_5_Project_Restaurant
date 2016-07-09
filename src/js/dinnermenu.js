@@ -23,10 +23,10 @@ function getDinner (){
 				<span class="itemName">${menuItem.item}</span><span class="itemPrice">${menuItem.price}</span></p>
 			<div class="itemDescription"><p class="descriptionP">${description}</p>
 				<ul class="buttonsUL">
-					<li class="fontawesome-warning-sign allergies"></li>
-					<li class="fontawesome-star-empty favorite"></li>
-					<li class="maki-fire-station  spicy"></li>
-					<li class="vegan">V</li>
+					<li class="fontawesome-warning-sign allergies menButton item${menuItem.id}"></li>
+					<li class="fontawesome-star-empty favorite menButton item${menuItem.id}"></li>
+					<li class="maki-fire-station  spicy menButton item${menuItem.id}"></li>
+					<li class="vegan menButton item${menuItem.id}">V</li>
 				</ul>
 			</div>`);	
 		});
@@ -42,10 +42,10 @@ function getDinner (){
 				<span class="itemName">${menuItem.item}</span><span class="itemPrice">${menuItem.price}</span></p>
 			<div class="itemDescription"><p class="descriptionP">${description}</p>
 				<ul class="buttonsUL">
-					<li class="fontawesome-warning-sign allergies"></li>
-					<li class="fontawesome-star-empty favorite"></li>
-					<li class="maki-fire-station  spicy"></li>
-					<li class="vegan">V</li>
+					<li class="fontawesome-warning-sign allergies menButton item${menuItem.id}"></li>
+					<li class="fontawesome-star-empty favorite menButton item${menuItem.id}"></li>
+					<li class="maki-fire-station  spicy menButton item${menuItem.id}"></li>
+					<li class="vegan menButton item${menuItem.id}">V</li>
 				</ul>
 			</div>`);	
 		});
@@ -61,12 +61,57 @@ function getDinner (){
 				<span class="itemName">${menuItem.item}</span><span class="itemPrice">${menuItem.price}</span></p>
 			<div class="itemDescription"><p class="descriptionP">${description}</p>
 				<ul class="buttonsUL">
-					<li class="fontawesome-warning-sign allergies"></li>
-					<li class="fontawesome-star-empty favorite"></li>
-					<li class="maki-fire-station  spicy"></li>
-					<li class="vegan">V</li>
+					<li class="fontawesome-warning-sign allergies menButton item${menuItem.id}"></li>
+					<li class="fontawesome-star-empty favorite menButton item${menuItem.id}"></li>
+					<li class="maki-fire-station  spicy menButton item${menuItem.id}"></li>
+					<li class="vegan menButton item${menuItem.id}">V</li>
 				</ul>
 			</div>`);	
+		});
+		$(".menButton").on('mouseenter', function(event){
+			event.preventDefault();
+			if($(event.target).hasClass("allergies")){
+				$(event.target).after(`<div class="menButtonDiv addOn">
+					<p class="menButtonDivHeader addOn">
+					Allergy Info
+					</p>
+					<p class="menButtonMessage addOn">
+					Allergy Message
+					</p>
+				</div>`);	
+			} else if($(event.target).hasClass("favorite")){
+				$(event.target).after(`<div class="menButtonDiv addOn">
+					<p class="menButtonDivHeader addOn">
+					Favorite
+					</p>
+					<p class="menButtonMessage addOn">
+					Favorite this menu item.
+					</p>
+				</div>`);		
+			} else if($(event.target).hasClass("spicy")){
+				$(event.target).after(`<div class="menButtonDiv addOn">
+					<p class="menButtonDivHeader addOn">
+					Spicy
+					</p>
+					<p class="menButtonMessage addOn">
+					This item is not spicy.
+					</p>
+				</div>`);		
+			} else {
+				$(event.target).after(`<div class="menButtonDiv addOn">
+					<p class="menButtonDivHeader addOn">
+					Vegan
+					</p>
+					<p class="menButtonMessage addOn">
+					This item is not vegan-friendly.
+					</p>
+				</div>`);
+			};
+			document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
+			document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
+		});
+		$(".menButton").on('mouseleave', function(event){
+				$(".addOn").remove();
 		});
 	});
 };

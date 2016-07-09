@@ -7,7 +7,7 @@
 * Used `.addClass` and `.removeClass` to add 'accordion' affect to the menu nav.
 
 ##### CSS Tools
-* Used to cut off text and add ...
+* Used to cut off text and add "..." to end of latest news paragraph.
   ``` CSS
   display: -webkit-box;
   

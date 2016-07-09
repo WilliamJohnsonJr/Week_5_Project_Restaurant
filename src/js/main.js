@@ -6,7 +6,7 @@ import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
 // import {getImg} from "./featureImg.js"
 import {getDinner} from "./dinnermenu"
-import {ourStoryBtn, menuBtn, resBtn, ourStory, menu, reservation, activate} from "./menu-nav.js"
+import {ourStoryBtn, menuBtn, resBtn, ourStory, menu, reservation, activate, activateStory, activateMenu, activateReservation} from "./menu-nav.js"
 var baseURL = `https://api.flickr.com/services/`
 
 function get() {
@@ -24,8 +24,29 @@ ourStoryBtn.on('click', activate)
 menuBtn.on('click', activate)
 resBtn.on('click', activate)
 
-$(".featButn").on('click', toggleClass)
+function showNavLinks(event) {
+  $(".nav-links").removeClass("hidden")
+  $(".show-nav-links").addClass("hidden")
+}
 
+function navActivate(event) {
+  if (event.target.innerHTML === 'Story') {
+    event.preventDefault();
+    activateStory();
+  } else if (event.target.innerHTML === 'Reservations') {
+    event.preventDefault();
+    activateReservation();
+  } else if (event.target.innerHTML === 'Menu') {
+    event.preventDefault();
+    activateMenu();
+  } else if (event.target.innerHTML === "Hide") { 
+      $(".nav-links").addClass("hidden")
+      $(".show-nav-links").removeClass("hidden")
+  }
+  $(".show-nav-links").on("click", showNavLinks)
+};
+
+$(".nav-link").on('click', navActivate)
 // remove border-bottom and border-arround from featButn
 // add hidden class to all featButn
 // remove hidden from clicked

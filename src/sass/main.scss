@@ -490,6 +490,33 @@ nav {
   }
 }
 
+.ourDinner{
+  font-size: 20px;
+  font-style: italic;
+  padding-bottom: 17px;
+  padding-top: 35px;
+   border-bottom: 1px solid gray;
+}
+
+@mixin headerDefault () {
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 31px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid gray;
+}
+
+.appsHeader {
+  @include headerDefault;
+  margin-top: 2px;
+  border-top: 9px solid lightgray;
+}
+
+.entreesHeader,
+.sidesHeader {
+@include headerDefault;
+}
 
 #eight {
   img {

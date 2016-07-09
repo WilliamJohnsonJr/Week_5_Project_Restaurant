@@ -159,6 +159,13 @@ nav {
     overflow: hidden;
     font-size: 0.65em;
     line-height: 1.5em;
+    position: relative;
+    &:after {
+      content: "read more >";
+      position: absolute;
+      top: 120px;
+      right: 0;
+    }
   }
 }
 
@@ -179,10 +186,8 @@ nav {
 }
 
 .todaysSpecial {
-    padding: 5px 10px 29px 10px;
-    margin-left: -8px;
-    margin-right: -8px;
-    font-size: 1em;
+    padding: 20px 10px 12px 10px;
+    margin: 0 10px;
     border-bottom: solid 1px #b3b3b3;
 }
 
@@ -191,9 +196,8 @@ nav {
 }
 
 .specialLine{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 12px;
+    margin: 10px 0 0 0;
+    padding: 0;
     font-weight: bold;
     font-size: 0.8em;
     display: flex;
@@ -236,11 +240,16 @@ nav {
 }
 
 .specialImageDiv{
-    width: 260px;
+    max-width: 100%;
     height: 100px;
-    margin-top: 0px;
-    background-image: url(https://c5.staticflickr.com/9/8697/16756892436_cb0c6b5c14_n.jpg);
-    background-position: 70% 50%;
+    margin: 10px 10px;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      max-width: 100%;
+      top: -30px;
+    }
   }
 
 
@@ -269,6 +278,9 @@ nav {
     }
     li {
       font-size: 0.7em;
+    }
+    a {
+      text-decoration: none;
     }
   }
   .iframe {

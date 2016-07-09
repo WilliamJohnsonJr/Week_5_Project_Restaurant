@@ -6,6 +6,7 @@ import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
 // import {getImg} from "./featureImg.js"
 import {getDinner} from "./dinnermenu"
+import {ourStoryBtn, menuBtn, resBtn, ourStory, menu, reservation, activate} from "./menu-nav.js"
 var baseURL = `https://api.flickr.com/services/`
 
 function get() {
@@ -17,3 +18,16 @@ function get() {
 
 getSpecial();
 getDinner();
+
+
+ourStoryBtn.on('click', activate)
+menuBtn.on('click', activate)
+resBtn.on('click', activate)
+
+$(".featButn").on('click', toggleClass)
+
+// remove border-bottom and border-arround from featButn
+// add hidden class to all featButn
+// remove hidden from clicked
+// add border-around to clicked
+// add border-bottom to not clicked

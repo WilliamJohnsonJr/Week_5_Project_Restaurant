@@ -297,6 +297,7 @@ nav {
     display: flex;
     align-items: center;
     height: 50px;
+    letter-spacing: 0.06em;
   }
   .story {
     width: 125px;
@@ -308,8 +309,7 @@ nav {
   }
   .res {
     width: 147px;
-    justify-content: flex-start;
-    padding-left: 30px; 
+    justify-content: center;
   }
   .filler {
     width: 288px;
@@ -373,6 +373,9 @@ nav {
 
 .reservations {
   form {
+    :first-child {
+      margin-top: 30px;
+    }
     display: flex;
     flex-direction: column;
     #fullName,
@@ -382,6 +385,17 @@ nav {
     #reserveTable {
       border-radius: 3px;
       border: solid 1px rgb(221,221,221)
+    }
+    label,
+    button {
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      margin: 10px;
+    }
+    input,
+    textarea,
+    select {
+      margin: 0 15px;
     }
     #fullName {
       width: 350px;

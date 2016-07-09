@@ -318,17 +318,17 @@ nav {
   }
 }
 
-.border-bottom {
+.inactive {
   border-bottom: solid 1px black;
 }
 
-.border-around {
+.active {
   border: solid 1px black;
   border-bottom: none;
 }
-// .hidden {
-//   display: none;
-// }
+.hidden {
+  display: none;
+}
 
 
 
@@ -353,7 +353,7 @@ nav {
 }
 
 .ourStory,
-.menu,
+.men,
 .reservations {
   width: 675px;
 }

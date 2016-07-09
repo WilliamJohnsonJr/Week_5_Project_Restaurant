@@ -501,7 +501,7 @@ nav {
 
 .foodImgContainer {
     width: 216px;
-    height: 162px;
+    max-height: 162px;
     overflow: hidden;
     margin: 20px 0;
   }

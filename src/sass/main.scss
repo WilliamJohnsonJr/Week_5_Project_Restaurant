@@ -4,6 +4,7 @@
   -moz-box-sizing: border-box;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  z-index: 0;
 }
 
 .container{
@@ -84,6 +85,7 @@ nav {
   left: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
   a {
     text-decoration: none;
     font-size: 13px;
@@ -578,6 +580,7 @@ nav {
       margin: 10px 0 0 20px;
       padding-right: 20px;
       display: inline-block;
+      border-right: solid 1px #D0D0D0;
     }
   }
 }
@@ -587,9 +590,8 @@ nav {
   list-style: none;
   padding: 0;
   min-width: 120px;
-  margin-left: 20px;
+  margin: 45px 0 0 30px;
   justify-content: space-around;
-  border-left: solid 1px black;
   li {
     list-style: none;
     padding: 0;

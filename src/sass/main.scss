@@ -4,6 +4,7 @@
   -moz-box-sizing: border-box;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  position: relative;
   z-index: 0;
 }
 
@@ -555,19 +556,25 @@ nav {
 .items {
   display: flex;
   flex-direction: column;
+  margin: 10px 0;
 }
 
 .item-header {
   display: flex;
   justify-content: space-between;
   p {
-    margin: 0;
+    margin: 0 0 0 10px;
   }
 }
 
 .item-title {
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1em; 
+  &:after {
+    content: '';
+    border-bottom: dotted 1px black;
+    width: 100%;
+  }
 }
 
 .item-price {
@@ -577,13 +584,14 @@ nav {
 .item-description {
   font-size: 0.8em;
   max-width: 80%;
+  border-right: solid black 1px;
 }
 
 .item-info {
   display: flex;
   justify-content: space-between;
   p {
-    margin: 0;
+    margin: 5px 0 5px 20px;
   }
 }
 
@@ -604,6 +612,11 @@ nav {
       border: solid black 1px;
     }
   }
+}
+
+.top {
+  position: relative;
+  z-index: 1;
 }
 
 // .itemDescription {

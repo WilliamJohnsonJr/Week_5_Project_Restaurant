@@ -481,6 +481,7 @@ nav {
   align-items: center;
   padding-left: 16px;
   margin-right: 3px;
+  border-left: 1px solid lightgray;
   li{
     list-style: none;
     margin-right: 5px;
@@ -577,10 +578,9 @@ nav {
 }
 
 .descriptionP{
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0 0 0 0;
+  padding: 24px 16px 41px 0;
   width: 538px;
-  border-right: 1px solid gray;
   font-size: 11px;
 }
 

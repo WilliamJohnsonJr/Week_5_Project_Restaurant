@@ -12,7 +12,8 @@ function getDinner (){
   fancyMenu.then(function(){
     console.log(fancyMenu.responseJSON);
     fancyMenu.responseJSON.appetizers.forEach(function(menuItem){
-      var itemHTML = `<ul class="menuItems">`
+      var itemHTML = `<div class="item">
+      								<ul class="menuItems">`
       var item = {
         name: menuItem.item,
         price: menuItem.price,
@@ -24,16 +25,16 @@ function getDinner (){
       }
       itemHTML += `<li class="menuItem">
                     <p class="item-name">${item.name}</p>
-                    <p class="item-description">${item.description}</p>
                     <p class="item-price">${item.price}</p>
+                    <p class="item-description">${item.description}</p>
                   </li>
                   </ul>
                   <ul class="specs">
 	                	<li class="fontawesome-warning-sign allergies">${item.allergies}</li>
 	                	<li class="fontawesome-star-empty favorite">${item.favorite}</li>
 	                	<li class="maki-fire-station  spicy">${item.spicy}</li>
-	                	<li class="vegan"><p>V</p>${item.vegan}</li>
-                </ul>`
+	                	<li class="vegan"><p>V${item.vegan}</p></li>
+                </ul></div>`
       $(".appsList").append(itemHTML)
     });
 
@@ -50,15 +51,15 @@ function getDinner (){
       }
       itemHTML += `<li class="menuItem">
                     <p class="item-name">${item.name}</p>
-                    <p class="item-description">${item.description}</p>
                     <p class="item-price">${item.price}</p>
+                    <p class="item-description">${item.description}</p>
                   </li>
                   </ul>
                   <ul class="specs">
 	                	<li class="fontawesome-warning-sign allergies">${item.allergies}</li>
 	                	<li class="fontawesome-star-empty favorite">${item.favorite}</li>
 	                	<li class="maki-fire-station  spicy">${item.spicy}</li>
-	                	<li class="vegan"><p>V</p>${item.vegan}</li>
+	                	<li class="vegan"><p>V${item.vegan}</p></li>
                 </ul>`
       $(".entreesList").append(itemHTML)
     });
@@ -76,15 +77,15 @@ function getDinner (){
       }
       itemHTML += `<li class="menuItem">
                     <p class="item-name">${item.name}</p>
-                    <p class="item-description">${item.description}</p>
                     <p class="item-price">${item.price}</p>
+                    <p class="item-description">${item.description}</p>
                   </li>
                 </ul>
                 <ul class="specs">
                 	<li class="fontawesome-warning-sign allergies">${item.allergies}</li>
 	                	<li class="fontawesome-star-empty favorite">${item.favorite}</li>
 	                	<li class="maki-fire-station  spicy">${item.spicy}</li>
-	                	<li class="vegan"><p>V</p>${item.vegan}</li>
+	                	<li class="vegan"><p>V${item.vegan}</p></li>
                 </ul>`
       $(".sidesList").append(itemHTML)
     });

@@ -218,7 +218,6 @@ nav {
   position: relative;
   bottom: 2px;
   background: rgb(235,235,235);
-  // z-index: 1;
   height: 12px;
 }
 
@@ -226,7 +225,6 @@ nav {
   font-weight: normal;
   font-size: 11px;
   background: rgb(235,235,235);
-  // z-index: 1;
   height: 12px;
 }
 
@@ -439,8 +437,8 @@ nav {
 .itemLine:before{
     content: '';
     position: absolute;
-    bottom: 1.7rem;
-    width: 96%;
+    bottom: 0.3rem;
+    width: 98%;
     height: 0;
     line-height: 0;
     height: 10px;
@@ -449,8 +447,6 @@ nav {
 
 .itemLine {
   margin: 0;
-  // margin-top: 0px;
-  // margin-bottom: 0px;
   padding-top: 16px;
   font-weight: bold;
   font-size: 12px;
@@ -462,7 +458,6 @@ nav {
 .itemName{
   position: relative;
   background: white;
-  z-index: 1;
   font-size: 16px;
   font-weight: bold
 }
@@ -471,9 +466,8 @@ nav {
   font-weight: normal;
   font-size: 12px;
   background: white;
-  z-index: 1;
-  position: relative;
   padding-right: 5px;
+  position: relative;
   top: 2px;
 }
 
@@ -536,13 +530,38 @@ nav {
 
 .menButtonDiv{
     position: absolute;
-    z-index: 1;
     height: 110px;
     width: 247px;
-    background: lightgray;
+    background: #E7E7E7;
     opacity: 1;
     top: 0px;
     left: 0px;
+    border: 1px solid #CCCCCC;
+    padding: 0 12px 0 12px;
+}
+
+.triangle{
+      position: absolute;
+      top: -14px;
+      left: 185px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12.5px 14px 12.5px;
+      border-color: transparent transparent #e7e7e7 transparent;
+    }
+
+.menButtonDivHeader{
+    border-bottom: 1px solid #D3D3D3;
+    color: #5C5C5C;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0 0 7px 0;
+}
+
+.menButtonMessage{
+  color: #A1A1A1;
+  font-size: 9px;
 }
 
 .descriptionP{

@@ -17,7 +17,7 @@ function getFood() {
       }
       var photoHTML = `<div class="foodImgContainer"><img src="https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg"></div>`
       $("#eight").append(photoHTML)
-      console.log(photoHTML)
+      // console.log(photoHTML)
     }
 
   });

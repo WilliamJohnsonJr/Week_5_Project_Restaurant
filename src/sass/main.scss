@@ -530,27 +530,30 @@ nav {
 @include headerDefault;
 }
 
-.itemDescription {
-  padding: 0 12px 0 12px;
-}
+// .itemDescription {
+//   padding: 0 12px 0 12px;
+// }
 
-.menButtonDiv{
-    position: absolute;
-    z-index: 1;
-    height: 110px;
-    width: 247px;
-    background: lightgray;
-    opacity: 1;
-    top: 0px;
-    left: 0px;
-}
+// .menButtonDiv{
+//     position: absolute;
+//     // z-index: 1;
+//     height: 110px;
+//     width: 247px;
+//     background: lightgray;
+//     top: 0px;
+//     left: 0px;
+// }
 
-.descriptionP{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 538px;
-  border-right: 1px solid gray;
-  font-size: 11px;
+// .descriptionP{
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   width: 538px;
+//   border-right: 1px solid gray;
+//   font-size: 11px;
+// }
+
+.menuItems {
+  list-style: none;
 }
 
 #eight {

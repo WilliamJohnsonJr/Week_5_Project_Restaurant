@@ -65,6 +65,40 @@ function spec(item) {
       }
 }
 
+function printSmall(menu) {
+  var menuHTML = `<ul class="items">`
+  menu.forEach(function(item) {
+    spec(item)
+    menuHTML += `<ul id="sides" class="items">
+                  <li class="item">
+                    <div class="item-header">
+                      <p class="item-title">${item.item}</p>
+                      <p class="item-price">${item.price}</p>
+                    </div>
+                    <div class="item-info">
+                      <ul class="item-specs">
+                        <li class="spec fontawesome-warning-sign allergy">
+                          <p class="top hidden">${item.allergies}</p>
+                        </li>
+                        <li class="spec fontawesome-star-empty favorite">
+                          <p class="top hidden">${item.favorite}</p>
+                        </li>
+                        <li class="spec maki-fire-station spicy">
+                          <p class="top hidden">${item.spicy}</p>
+                        </li>
+                        <li class="spec vegan">
+                          V
+                          <p class="top hidden">${item.vegan}</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>`
+  })
+
+  menuHTML += `</ul>`
+  return menuHTML
+}
 
 function print(menu) {
   var menuHTML = `<ul class="items">`
@@ -118,7 +152,7 @@ function nameMenus(menus) {
     print(entrees)
     );
   $(".sidesList").append(
-    print(sides)
+    printSmall(sides)
     );
   hideEmptySpecs()
   $(".spec").ready(highlight)

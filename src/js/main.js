@@ -47,6 +47,17 @@ function navActivate(event) {
 };
 
 $(".nav-link").on('click', navActivate)
+
+
+function alertReservation(event) {
+  event.preventDefault();
+  if(confirm("Your reservation has been made.")){
+    window.location.reload();  
+}
+}
+
+
+$("#reserveTable").on('click', alertReservation)
 // remove border-bottom and border-arround from featButn
 // add hidden class to all featButn
 // remove hidden from clicked

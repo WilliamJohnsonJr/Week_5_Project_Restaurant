@@ -80,6 +80,8 @@ function getDinner (){
 					</p>
 					<div class="triangle">
 					</div>
+					<div class="triangle2">
+					</div>
 				</div>`);	
 			} else if($(event.target).hasClass("favorite")){
 				$(".container").append(`<div class="menButtonDiv addOn">
@@ -90,6 +92,8 @@ function getDinner (){
 					Favorite this menu item.
 					</p>
 					<div class="triangle">
+					</div>
+					<div class="triangle2">
 					</div>
 				</div>`);		
 			} else if($(event.target).hasClass("spicy")){
@@ -102,6 +106,8 @@ function getDinner (){
 					</p>
 					<div class="triangle">
 					</div>
+					<div class="triangle2">
+					</div>
 				</div>`);		
 			} else {
 				$(".container").append(`<div class="menButtonDiv addOn">
@@ -112,6 +118,8 @@ function getDinner (){
 					This item is not vegan-friendly.
 					</p>
 					<div class="triangle">
+					</div>
+					<div class="triangle2">
 					</div>
 				</div>`);
 			};

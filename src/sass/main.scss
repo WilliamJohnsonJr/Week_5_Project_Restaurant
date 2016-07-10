@@ -551,6 +551,18 @@ nav {
       border-color: transparent transparent #e7e7e7 transparent;
     }
 
+.triangle2{
+    position: absolute;
+    top: -15px;
+    left: 184px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13.5px 15px 13.5px;
+    border-color: transparent transparent #CCCCCC transparent;
+    z-index: -1;
+}
+
 .menButtonDivHeader{
     border-bottom: 1px solid #D3D3D3;
     color: #5C5C5C;

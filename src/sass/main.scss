@@ -4,6 +4,11 @@
   -moz-box-sizing: border-box;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  z-index: 0;
+}
+
+.invisible {
+  display: none;
 }
 
 .container{
@@ -84,6 +89,7 @@ nav {
   left: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
   a {
     text-decoration: none;
     font-size: 13px;
@@ -324,6 +330,11 @@ nav {
     height: 50px;
   }
 }
+.glow {
+  box-shadow: 0px 0px 3px 3px grey;
+  width: 15px;
+  height: 15px;
+}
 
 .inactive {
   border-bottom: solid 1px black;
@@ -335,6 +346,10 @@ nav {
 }
 .hidden {
   display: none;
+}
+
+.vegan {
+  text-align: center;
 }
 
 #menDiv {
@@ -530,28 +545,90 @@ nav {
 @include headerDefault;
 }
 
-.itemDescription {
-  padding: 0 12px 0 12px;
+
+.items,
+.item-specs {
+  padding: 0;
+  list-style: none;
 }
 
-.menButtonDiv{
-    position: absolute;
-    z-index: 1;
-    height: 110px;
-    width: 247px;
-    background: lightgray;
-    opacity: 1;
-    top: 0px;
-    left: 0px;
+.items {
+  display: flex;
+  flex-direction: column;
 }
 
-.descriptionP{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 538px;
-  border-right: 1px solid gray;
-  font-size: 11px;
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
 }
+
+.item-title {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.item-price {
+  font-size: 0.9em;
+}
+
+.item-description {
+  font-size: 0.8em;
+  max-width: 80%;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+
+.item-specs {
+  display: flex;
+  min-width: 15%;
+  max-width: 15%;
+  justify-content: space-between;
+  li {
+    position: relative;
+    list-style: none;
+    p {
+      margin: 0;
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      background-color: rgb(231, 231, 231);
+      border: solid black 1px;
+    }
+  }
+}
+
+// .itemDescription {
+//   padding: 0 12px 0 12px;
+// }
+
+// .menButtonDiv{
+//     position: absolute;
+//     // z-index: 1;
+//     height: 110px;
+//     width: 247px;
+//     background: lightgray;
+//     top: 0px;
+//     left: 0px;
+// }
+
+// .descriptionP{
+//   margin-top: 0px;
+//   margin-bottom: 0px;
+//   width: 538px;
+//   border-right: 1px solid gray;
+//   font-size: 11px;
+// }
+
+
 
 #eight {
   img {

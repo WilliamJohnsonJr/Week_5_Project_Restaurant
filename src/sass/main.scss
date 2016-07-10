@@ -7,6 +7,10 @@
   z-index: 0;
 }
 
+.invisible {
+  display: none;
+}
+
 .container{
   position: relative;
 }
@@ -326,6 +330,11 @@ nav {
     height: 50px;
   }
 }
+.glow {
+  box-shadow: 0px 0px 3px 3px grey;
+  width: 15px;
+  height: 15px;
+}
 
 .inactive {
   border-bottom: solid 1px black;
@@ -337,6 +346,10 @@ nav {
 }
 .hidden {
   display: none;
+}
+
+.vegan {
+  text-align: center;
 }
 
 #menDiv {
@@ -532,6 +545,67 @@ nav {
 @include headerDefault;
 }
 
+
+.items,
+.item-specs {
+  padding: 0;
+  list-style: none;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.item-price {
+  font-size: 0.9em;
+}
+
+.item-description {
+  font-size: 0.8em;
+  max-width: 80%;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+
+.item-specs {
+  display: flex;
+  min-width: 15%;
+  max-width: 15%;
+  justify-content: space-between;
+  li {
+    position: relative;
+    list-style: none;
+    p {
+      margin: 0;
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      background-color: rgb(231, 231, 231);
+      border: solid black 1px;
+    }
+  }
+}
+
 // .itemDescription {
 //   padding: 0 12px 0 12px;
 // }
@@ -554,52 +628,7 @@ nav {
 //   font-size: 11px;
 // }
 
-.item {
-  display: flex;
-}
 
-.menuItems {
-  list-style: none;
-  padding: 0;
-  .menuItem {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    .item-name {
-      float: left;
-      margin: 0 0 0 10px;
-      font-weight: 600;
-      font-size: 1em;
-    }
-    .item-price {
-    float: right;
-    margin: 0;
-    }
-    .item-description {
-      width: 100%;
-      margin: 10px 0 0 20px;
-      padding-right: 20px;
-      display: inline-block;
-      border-right: solid 1px #D0D0D0;
-    }
-  }
-}
-
-.specs {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  min-width: 120px;
-  margin: 45px 0 0 30px;
-  justify-content: space-around;
-  li {
-    list-style: none;
-    padding: 0;
-    p {
-      margin: 0;
-    }
-  }
-}
 
 #eight {
   img {

@@ -224,7 +224,6 @@ nav {
   position: relative;
   bottom: 2px;
   background: rgb(235,235,235);
-  // z-index: 1;
   height: 12px;
 }
 
@@ -232,7 +231,6 @@ nav {
   font-weight: normal;
   font-size: 11px;
   background: rgb(235,235,235);
-  // z-index: 1;
   height: 12px;
 }
 
@@ -337,11 +335,11 @@ nav {
 }
 
 .inactive {
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px #DDDDDD;
 }
 
 .active {
-  border: solid 1px black;
+  border: solid 1px #DDDDDD;
   border-bottom: none;
 }
 .hidden {
@@ -454,8 +452,8 @@ nav {
 .itemLine:before{
     content: '';
     position: absolute;
-    bottom: 1.7rem;
-    width: 96%;
+    bottom: 0.3rem;
+    width: 98%;
     height: 0;
     line-height: 0;
     height: 10px;
@@ -464,8 +462,6 @@ nav {
 
 .itemLine {
   margin: 0;
-  // margin-top: 0px;
-  // margin-bottom: 0px;
   padding-top: 16px;
   font-weight: bold;
   font-size: 12px;
@@ -477,7 +473,6 @@ nav {
 .itemName{
   position: relative;
   background: white;
-  z-index: 1;
   font-size: 16px;
   font-weight: bold
 }
@@ -486,9 +481,8 @@ nav {
   font-weight: normal;
   font-size: 12px;
   background: white;
-  z-index: 1;
-  position: relative;
   padding-right: 5px;
+  position: relative;
   top: 2px;
 }
 
@@ -502,6 +496,7 @@ nav {
   align-items: center;
   padding-left: 16px;
   margin-right: 3px;
+  border-left: 1px solid #D4D4D4;
   li{
     list-style: none;
     margin-right: 5px;
@@ -552,9 +547,59 @@ nav {
   list-style: none;
 }
 
-.items {
-  display: flex;
-  flex-direction: column;
+.menButtonDiv{
+    position: absolute;
+    height: 110px;
+    width: 247px;
+    background: #E7E7E7;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+    border: 1px solid #CCCCCC;
+    padding: 0 12px 0 12px;
+}
+
+.triangle{
+      position: absolute;
+      top: -14px;
+      left: 185px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12.5px 14px 12.5px;
+      border-color: transparent transparent #e7e7e7 transparent;
+    }
+
+.triangle2{
+    position: absolute;
+    top: -15px;
+    left: 184px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 13.5px 15px 13.5px;
+    border-color: transparent transparent #CCCCCC transparent;
+    z-index: -1;
+}
+
+.menButtonDivHeader{
+    border-bottom: 1px solid #D3D3D3;
+    color: #5C5C5C;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 0 0 7px 0;
+}
+
+.menButtonMessage{
+  color: #A1A1A1;
+  font-size: 9px;
+}
+
+.descriptionP{
+  margin: 0 0 0 0;
+  padding: 24px 16px 41px 0;
+  width: 538px;
+  font-size: 11px;
 }
 
 .item-header {
@@ -606,29 +651,19 @@ nav {
   }
 }
 
-// .itemDescription {
-//   padding: 0 12px 0 12px;
-// }
+.itemDescription {
+  padding: 0 12px 0 12px;
+}
 
-// .menButtonDiv{
-//     position: absolute;
-//     // z-index: 1;
-//     height: 110px;
-//     width: 247px;
-//     background: lightgray;
-//     top: 0px;
-//     left: 0px;
-// }
-
-// .descriptionP{
-//   margin-top: 0px;
-//   margin-bottom: 0px;
-//   width: 538px;
-//   border-right: 1px solid gray;
-//   font-size: 11px;
-// }
-
-
+.menButtonDiv{
+    position: absolute;
+    height: 110px;
+    width: 247px;
+    background: #E7E7E7;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 0 5px 1px #E7E7E7;
+}
 
 #eight {
   img {
@@ -644,5 +679,7 @@ nav {
   }
 
 footer {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #CACACA;
+  font-size: 10px;
 }
+

@@ -334,7 +334,7 @@ header {
 }
 
 .inactive {
-  border-bottom: solid 1px #DDD;
+  border-bottom: solid 1px black;
 }
 
 // .active {
@@ -343,7 +343,11 @@ header {
 // }
 
 .active {
+<<<<<<< HEAD
   border: solid 1px #DDDDDD;
+=======
+  border: solid 1px black;
+>>>>>>> parent of 511fb21... as good as its gonna get
   border-bottom: none;
 }
 
@@ -737,3 +741,10 @@ footer {
     }
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> parent of 511fb21... as good as its gonna get

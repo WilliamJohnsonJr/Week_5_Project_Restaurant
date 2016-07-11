@@ -1,6 +1,6 @@
 import $ from "jquery"
 import {key} from "./secrets.js"
-import {populateNews, extend} from "./news.js"
+import {news} from "./news.js"
 import {locationHTML} from "./location.js"
 import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
@@ -18,8 +18,7 @@ function get() {
 
 getSpecial();
 getDinner();
-populateNews();
-$(".read-more").on('click', extend)
+
 
 ourStoryBtn.on('click', activate)
 menuBtn.on('click', activate)
@@ -55,12 +54,12 @@ function alertReservation(event) {
   event.preventDefault();
   if(confirm("Your reservation has been made.")){
     window.location.reload();  
-  }
 }
-
+}
 
 activateStory();
 
+<<<<<<< HEAD
 function reservationConfirm (event) {
   event.preventDefault();
   if ($("#fullName").val() !== "" && $("#guests").val() !== ""  && $("#date") !== "") {
@@ -73,9 +72,20 @@ function reservationConfirm (event) {
 
 $("#reserveTable").on('click', reservationConfirm);
 
+
+$("#reserveTable").on('click', alertReservation)
+
+=======
+$("#reserveTable").on('click', alertReservation)
+>>>>>>> parent of 511fb21... as good as its gonna get
 // remove border-bottom and border-arround from featButn
 // add hidden class to all featButn
 // remove hidden from clicked
 // add border-around to clicked
+<<<<<<< HEAD
+// add border-bottom to not clicked
 // add border-bottom to not clicked
 
+=======
+// add border-bottom to not clicked
+>>>>>>> parent of 511fb21... as good as its gonna get

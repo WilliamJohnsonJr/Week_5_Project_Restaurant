@@ -1,7 +1,7 @@
 import $ from "jquery";
 import _ from "lodasH";
 
-var baseURL = `https://json-data.herokuapp.com/restaurant`
+var baseURL = `https://json-data.herokuapp.com/restaurant/`
 
 
 function highlight() {
@@ -161,11 +161,16 @@ function nameMenus(menus) {
   $(".spec").on('mouseleave', hide)
 }
 
-// function getDinner (){
-// 	var fancyMenu =  $.ajax({
-//   	url: `${baseURL}/menu/1`,
-//   	dataType: 'json',
-// 	});
+function getDinner() {
+  var fancyMenu = $.ajax({
+    url: `https://json-data.herokuapp.com/restaurant/menu/1`,
+    dataType: 'json'
+  }).then(function(fancyMenu) {
+    nameMenus(fancyMenu)
+  })
+};
+
+export {getDinner};
 
 // 	fancyMenu.then(function(){
 // 		console.log(fancyMenu.responseJSON);
@@ -471,5 +476,3 @@ function nameMenus(menus) {
 // 		});
 // 	});
 // };
-
-export {getDinner};

@@ -59,7 +59,6 @@ function alertReservation(event) {
 
 activateStory();
 
-<<<<<<< HEAD
 function reservationConfirm (event) {
   event.preventDefault();
   if ($("#fullName").val() !== "" && $("#guests").val() !== ""  && $("#date") !== "") {
@@ -75,17 +74,16 @@ $("#reserveTable").on('click', reservationConfirm);
 
 $("#reserveTable").on('click', alertReservation)
 
-=======
 $("#reserveTable").on('click', alertReservation)
->>>>>>> parent of 511fb21... as good as its gonna get
+
 // remove border-bottom and border-arround from featButn
 // add hidden class to all featButn
 // remove hidden from clicked
 // add border-around to clicked
-<<<<<<< HEAD
+
 // add border-bottom to not clicked
 // add border-bottom to not clicked
 
-=======
+
 // add border-bottom to not clicked
->>>>>>> parent of 511fb21... as good as its gonna get
+

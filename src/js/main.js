@@ -1,6 +1,6 @@
 import $ from "jquery"
 import {key} from "./secrets.js"
-import {news} from "./news.js"
+import {populateNews, extend} from "./news.js"
 import {locationHTML} from "./location.js"
 import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
@@ -18,7 +18,8 @@ function get() {
 
 getSpecial();
 getDinner();
-
+populateNews();
+$(".read-more").on('click', extend)
 
 ourStoryBtn.on('click', activate)
 menuBtn.on('click', activate)
@@ -48,6 +49,16 @@ function navActivate(event) {
 
 $(".nav-link").on('click', navActivate)
 
+
+
+function alertReservation(event) {
+  event.preventDefault();
+  if(confirm("Your reservation has been made.")){
+    window.location.reload();  
+  }
+}
+
+
 activateStory();
 
 function reservationConfirm (event) {
@@ -67,3 +78,4 @@ $("#reserveTable").on('click', reservationConfirm);
 // remove hidden from clicked
 // add border-around to clicked
 // add border-bottom to not clicked
+

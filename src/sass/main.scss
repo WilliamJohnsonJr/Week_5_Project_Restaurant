@@ -4,6 +4,7 @@
   -moz-box-sizing: border-box;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  position: relative;
   z-index: 0;
 }
 
@@ -13,6 +14,13 @@
 
 .container{
   position: relative;
+  width: 950px;
+  margin: 0 auto;
+}
+@media (max-width: 1020px) {
+  .container {
+    margin-left: 40px;
+  }
 }
 
 @import url(http://weloveiconfonts.com/api/?family=fontawesome|maki);
@@ -25,11 +33,6 @@
 /* maki */
 [class*="maki-"]:before {
   font-family: 'maki', sans-serif;
-}
-
-.container {
-  width: 950px;
-  margin: 0 auto;
 }
 
 header {
@@ -138,7 +141,7 @@ nav {
   .latest {
     padding: 20px 10px 12px 10px;
     margin: 0 10px;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 400;
     border-bottom: solid 1px rgb(179, 179, 179);
   }
@@ -170,13 +173,25 @@ nav {
     font-size: 0.65em;
     line-height: 1.5em;
     position: relative;
-    &:after {
-      content: "read more >";
-      position: absolute;
-      top: 120px;
-      right: 0;
-    }
   }
+}
+
+p.big-news {
+  height: 350px
+
+}
+
+a.big-news {
+  top: 322px;
+}
+
+
+.read-more {
+  position: absolute;
+  top: 205px;
+  right: 20px;
+  font-size: 0.65em;
+  text-decoration: none;
 }
 
 .specials {
@@ -193,6 +208,7 @@ nav {
     padding: 20px 10px 12px 10px;
     margin: 0 10px;
     border-bottom: solid 1px #b3b3b3;
+    font-size: 0.9em
 }
 
 .specialLineContainer{
@@ -250,6 +266,7 @@ nav {
       position: absolute;
       max-width: 100%;
       top: -35px;
+      -webkit-filter: opacity(65%);
     }
   }
 
@@ -298,8 +315,10 @@ nav {
     font-size: 1em;
     border-bottom: solid 1px rgb(179, 179, 179);
     font-weight: 400;
+    font-size: 0.9em;
   }
 }
+
 
 .featureHeader {
   margin-top: 30px;
@@ -330,16 +349,22 @@ nav {
 }
 .glow {
   box-shadow: 0px 0px 3px 3px grey;
-  width: 15px;
-  height: 15px;
 }
 
 .inactive {
+<<<<<<< HEAD
+  border-bottom: solid 1px #DDD;
+}
+
+.active {
+  border: solid 1px #DDD;
+=======
   border-bottom: solid 1px #DDDDDD;
 }
 
 .active {
   border: solid 1px #DDDDDD;
+>>>>>>> dda81631dcd236d7e688f9a7708fd96d55e445f2
   border-bottom: none;
 }
 .hidden {
@@ -356,10 +381,11 @@ nav {
 
 #seven {
   .ourStoryText {
-    font-size: 0.8em;
+    font-size: 0.75em;
     line-height: 1.8em;
     letter-spacing: 0.02em;
     padding: 0 3px;
+    margin: 1.5em 0;
   }
 }
 
@@ -406,7 +432,11 @@ nav {
     #notes,
     #reserveTable {
       border-radius: 3px;
-      border: solid 1px rgb(221,221,221)
+      border: solid 1px rgb(221,221,221);
+      -webkit-box-shadow: inset 2px 2px 3px 0px rgba(246,246,246,1);
+      -moz-box-shadow: inset 2px 2px 3px 0px rgba(246,246,246,1);
+      box-shadow: inset 2px 2px 3px 0px rgba(246,246,246,1);
+
     }
     label,
     button {
@@ -444,6 +474,7 @@ nav {
       color: white;
       background-color: black;
       border: none;
+      margin-top: 40px;
     }
 
   }
@@ -524,7 +555,7 @@ nav {
   font-size: 20px;
   font-weight: bold;
   font-style: italic;
-  padding: 31px 12px 16px 12px;
+  // padding: 20px 12px 10px 12px;
   border-bottom: 1px solid gray;
   @include borderColor;
 }
@@ -547,6 +578,12 @@ nav {
   list-style: none;
 }
 
+<<<<<<< HEAD
+.items {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+=======
 .menButtonDiv{
     position: absolute;
     height: 110px;
@@ -600,35 +637,50 @@ nav {
   padding: 24px 16px 41px 0;
   width: 538px;
   font-size: 11px;
+>>>>>>> dda81631dcd236d7e688f9a7708fd96d55e445f2
 }
 
 .item-header {
   display: flex;
   justify-content: space-between;
   p {
-    margin: 0;
+    margin: 0 0 0 10px;
   }
 }
 
 .item-title {
   font-weight: 600;
   font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  &::after {
+    content: "........................................................................................................................................................................................................................................................";
+    width: 300px;
+    font-size: 0.4em;
+    letter-spacing: 0.2em;
+    color: rgb(92, 92, 92)
+  }
 }
 
 .item-price {
   font-size: 0.9em;
+  color: rgb(92, 92, 92)
 }
 
 .item-description {
-  font-size: 0.8em;
-  max-width: 80%;
+  font-size: 0.7em;
+  line-height: 1.8em;
+  width: 530px;
+  padding: 0 20px 0 0;
+  border-right: solid rgb(217, 217, 217) 1px;
+  color: rgb(92, 92, 92)
 }
 
 .item-info {
   display: flex;
   justify-content: space-between;
   p {
-    margin: 0;
+    margin: 5px 0 5px 10px;
   }
 }
 
@@ -637,18 +689,51 @@ nav {
   min-width: 15%;
   max-width: 15%;
   justify-content: space-between;
+  margin-top: 12px;
   li {
     position: relative;
     list-style: none;
-    p {
-      margin: 0;
-      position: absolute;
-      right: 10px;
-      top: 20px;
-      background-color: rgb(231, 231, 231);
-      border: solid black 1px;
-    }
+    background-color: lightgray;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+
   }
+}
+
+#sides {
+  .item-info {
+    justify-content: flex-end;
+  }
+}
+
+.top {
+  white-space: nowrap;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 8px;
+  line-height: 1.03em;
+  letter-spacing: 0.1em;
+  margin: 0;
+  position: absolute;
+  left: -30px;
+  top: 35px;
+  background-color: rgb(231, 231, 231);
+  border: solid black 1px;
+  &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 15px 10px;
+      border-color: transparent transparent rgb(231, 231, 231) transparent;
+      position: absolute;
+      top: -14px;
+      left: 18px;
+    }
 }
 
 .itemDescription {
@@ -679,7 +764,26 @@ nav {
   }
 
 footer {
+<<<<<<< HEAD
+  border-top: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.4em;
+  p {
+    margin: 2px 0 0 10px;
+    &:first-child {
+      margin: 10px 0 0 0;
+    }
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+=======
   border-top: 1px solid #CACACA;
   font-size: 10px;
 }
 
+>>>>>>> dda81631dcd236d7e688f9a7708fd96d55e445f2

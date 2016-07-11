@@ -1,6 +1,6 @@
 #### Week 5 Project - Restaurant Page
 
-# **Need to Style `read more>` into the end of latest news `<p>`**
+[Surge](http://tiy-humdrum-project.surge.sh/)
 
 ##### javaScript Tools
 * Used `$.ajax()` to pull images from flickr
@@ -17,6 +17,3 @@
   
   text-overflow: -o-ellipsis-lastline;
   ```
-
-
-  asdkfha;skdjf

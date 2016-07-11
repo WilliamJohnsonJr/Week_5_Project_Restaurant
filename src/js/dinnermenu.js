@@ -30,62 +30,82 @@ function getDinner (){
 				</ul>
 			</div>`);
 			$(".menButton").on('mouseenter', function(event){
-			event.preventDefault();
-			if($(event.target).hasClass("allergies")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Allergy Info
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.allergies}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);
-			} else if($(event.target).hasClass("favorite")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Favorite
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.favorite}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);		
-			} else if($(event.target).hasClass("spicy")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Spicy
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.spicy}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);		
-			} else {
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Vegan
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.vegan}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);
-			};
-			document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
-			document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
+				event.preventDefault();
+				if($(event.target).hasClass("allergies")){
+					if(menuItem.allergies == 0){
+						menuItem.allergies = "No allergens in this food";
+					} else if (menuItem.allergies == 1){
+						menuItem.allergies = "This item contains food allergens";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Allergy Info
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.allergies}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);
+				} else if($(event.target).hasClass("favorite")){
+					if(menuItem.favorite == 0){
+						menuItem.favorite = "This is a standard menu item";
+					} else if (menuItem.favorite == 1){
+						menuItem.favorite = "This item is a favorite of our in-house chef";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Favorite
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.favorite}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);		
+				} else if($(event.target).hasClass("spicy")){
+					if(menuItem.spicy == 0){
+						menuItem.spicy = "Not spicy";
+					} else if (menuItem.spicy == 1){
+						menuItem.spicy = "This item is spicy";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Spicy
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.spicy}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);		
+				} else {
+					if(menuItem.vegan == 0){
+						menuItem.vegan = "This item is not vegan-friendly";
+					} else if (menuItem.vegan == 1){
+						menuItem.vegan = "This item is vegan-friendly";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Vegan
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.vegan}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);
+				};
+				document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
+				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
 			});
 			$(".menButton").on('mouseleave', function(event){
 					$(".addOn").remove();
@@ -110,62 +130,82 @@ function getDinner (){
 				</ul>
 			</div>`);	
 			$(".menButton").on('mouseenter', function(event){
-			event.preventDefault();
-			if($(event.target).hasClass("allergies")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Allergy Info
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.allergies}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);
-			} else if($(event.target).hasClass("favorite")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Favorite
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.favorite}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);		
-			} else if($(event.target).hasClass("spicy")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Spicy
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.spicy}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);		
-			} else {
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Vegan
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.vegan}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);
-			};
-			document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
-			document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
+				event.preventDefault();
+				if($(event.target).hasClass("allergies")){
+					if(menuItem.allergies == 0){
+						menuItem.allergies = "No allergens in this food";
+					} else if (menuItem.allergies == 1){
+						menuItem.allergies = "This item contains food allergens";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Allergy Info
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.allergies}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);
+				} else if($(event.target).hasClass("favorite")){
+					if(menuItem.favorite == 0){
+						menuItem.favorite = "This is a standard menu item";
+					} else if (menuItem.favorite == 1){
+						menuItem.favorite = "This item is a favorite of our in-house chef";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Favorite
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.favorite}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);		
+				} else if($(event.target).hasClass("spicy")){
+					if(menuItem.spicy == 0){
+						menuItem.spicy = "Not spicy";
+					} else if (menuItem.spicy == 1){
+						menuItem.spicy = "This item is spicy";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Spicy
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.spicy}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);		
+				} else {
+					if(menuItem.vegan == 0){
+						menuItem.vegan = "This item is not vegan-friendly";
+					} else if (menuItem.vegan == 1){
+						menuItem.vegan = "This item is vegan-friendly";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Vegan
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.vegan}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);
+				};
+				document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
+				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
 			});
 			$(".menButton").on('mouseleave', function(event){
 					$(".addOn").remove();
@@ -190,62 +230,82 @@ function getDinner (){
 				</ul>
 			</div>`);	
 			$(".menButton").on('mouseenter', function(event){
-			event.preventDefault();
-			if($(event.target).hasClass("allergies")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Allergy Info
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.allergies}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);
-			} else if($(event.target).hasClass("favorite")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Favorite
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.favorite}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);		
-			} else if($(event.target).hasClass("spicy")){
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Spicy
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.spicy}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);		
-			} else {
-				$(".container").append(`<div class="menButtonDiv addOn">
-					<p class="menButtonDivHeader addOn">
-					Vegan
-					</p>
-					<p class="menButtonMessage addOn">
-					${menuItem.vegan}
-					</p>
-					<div class="triangle">
-					</div>
-					<div class="triangle2">
-					</div>
-				</div>`);
-			};
-			document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
-			document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
+				event.preventDefault();
+				if($(event.target).hasClass("allergies")){
+					if(menuItem.allergies == 0){
+						menuItem.allergies = "No allergens in this food";
+					} else if (menuItem.allergies == 1){
+						menuItem.allergies = "This item contains food allergens";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Allergy Info
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.allergies}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);
+				} else if($(event.target).hasClass("favorite")){
+					if(menuItem.favorite == 0){
+						menuItem.favorite = "This is a standard menu item";
+					} else if (menuItem.favorite == 1){
+						menuItem.favorite = "This item is a favorite of our in-house chef";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Favorite
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.favorite}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);		
+				} else if($(event.target).hasClass("spicy")){
+					if(menuItem.spicy == 0){
+						menuItem.spicy = "Not spicy";
+					} else if (menuItem.spicy == 1){
+						menuItem.spicy = "This item is spicy";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Spicy
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.spicy}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);		
+				} else {
+					if(menuItem.vegan == 0){
+						menuItem.vegan = "This item is not vegan-friendly";
+					} else if (menuItem.vegan == 1){
+						menuItem.vegan = "This item is vegan-friendly";
+					};
+					$(".container").append(`<div class="menButtonDiv addOn">
+						<p class="menButtonDivHeader addOn">
+						Vegan
+						</p>
+						<p class="menButtonMessage addOn">
+						${menuItem.vegan}
+						</p>
+						<div class="triangle">
+						</div>
+						<div class="triangle2">
+						</div>
+					</div>`);
+				};
+				document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
+				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
 			});
 			$(".menButton").on('mouseleave', function(event){
 					$(".addOn").remove();

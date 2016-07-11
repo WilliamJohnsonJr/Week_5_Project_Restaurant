@@ -4,6 +4,11 @@
   -moz-box-sizing: border-box;
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+  z-index: 0;
+}
+
+.invisible {
+  display: none;
 }
 
 .container{
@@ -84,6 +89,7 @@ nav {
   left: 10px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
   a {
     text-decoration: none;
     font-size: 13px;
@@ -322,17 +328,26 @@ nav {
     height: 50px;
   }
 }
+.glow {
+  box-shadow: 0px 0px 3px 3px grey;
+  width: 15px;
+  height: 15px;
+}
 
 .inactive {
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px #DDDDDD;
 }
 
 .active {
-  border: solid 1px black;
+  border: solid 1px #DDDDDD;
   border-bottom: none;
 }
 .hidden {
   display: none;
+}
+
+.vegan {
+  text-align: center;
 }
 
 #menDiv {
@@ -481,7 +496,7 @@ nav {
   align-items: center;
   padding-left: 16px;
   margin-right: 3px;
-  border-left: 1px solid lightgray;
+  border-left: 1px solid #D4D4D4;
   li{
     list-style: none;
     margin-right: 5px;
@@ -525,8 +540,11 @@ nav {
 @include headerDefault;
 }
 
-.itemDescription {
-  padding: 0 12px 0 12px;
+
+.items,
+.item-specs {
+  padding: 0;
+  list-style: none;
 }
 
 .menButtonDiv{
@@ -584,6 +602,69 @@ nav {
   font-size: 11px;
 }
 
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+
+.item-title {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.item-price {
+  font-size: 0.9em;
+}
+
+.item-description {
+  font-size: 0.8em;
+  max-width: 80%;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin: 0;
+  }
+}
+
+.item-specs {
+  display: flex;
+  min-width: 15%;
+  max-width: 15%;
+  justify-content: space-between;
+  li {
+    position: relative;
+    list-style: none;
+    p {
+      margin: 0;
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      background-color: rgb(231, 231, 231);
+      border: solid black 1px;
+    }
+  }
+}
+
+.itemDescription {
+  padding: 0 12px 0 12px;
+}
+
+.menButtonDiv{
+    position: absolute;
+    height: 110px;
+    width: 247px;
+    background: #E7E7E7;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 0 5px 1px #E7E7E7;
+}
+
 #eight {
   img {
     width: 216px;
@@ -598,5 +679,7 @@ nav {
   }
 
 footer {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid #CACACA;
+  font-size: 10px;
 }
+

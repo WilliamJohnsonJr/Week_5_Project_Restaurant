@@ -1,9 +1,7 @@
 #### Week 5 Project - Restaurant Page
-
-[Post Merge Disaster Surge](http://tiy-humdrum-project.surge.sh/) (Jenna - after merge conflict)
-
-[Post Merge Disaster Surge](http://narrow-boat.surge.sh) (Will - after merge conflict)
-
+---
+##### First Team Project
+---
 
 ##### javaScript Tools
 * Used `$.ajax()` to pull images from flickr
@@ -20,3 +18,7 @@
   
   text-overflow: -o-ellipsis-lastline;
   ```
+
+[Post Merge Disaster Surge](http://tiy-humdrum-project.surge.sh/) (Jenna - after merge conflict)
+
+[Post Merge Disaster Surge](http://narrow-boat.surge.sh) (Will - after merge conflict)

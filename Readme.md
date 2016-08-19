@@ -1,4 +1,4 @@
-#### Humdrum Grill
+# Humdrum Grill
 
 A weekend project by Will Johnson and Jenna Rajani.
 
@@ -11,7 +11,7 @@ Jenna Rajani: https://github.com/jjrajani
 ##Tools used:
 HTML, Sass/SCSS, JavaScript, jQuery, AJAX, ES6.
 
-# **Need to Style `read more>` into the end of latest news `<p>`**
+#### Need to Style `read more>` into the end of latest news `<p>`**
 
 ##### javaScript Tools
 * Used `$.ajax()` to pull images from flickr

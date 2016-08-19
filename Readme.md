@@ -4,7 +4,7 @@ A single-page restaurant website coded according to a set of mockup images provi
 
 Built in one weekend by Will Johnson and Jenna Rajani.
 
-## Live on Surge at: http://williamjohnsonjr-humdrumgrill.surge.sh
+## Live on Surge at: https://williamjohnsonjr-humdrumgrill.surge.sh/
 
 Will Johnson: https://github.com/WilliamJohnsonJr
 

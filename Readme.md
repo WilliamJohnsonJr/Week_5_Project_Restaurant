@@ -1,6 +1,8 @@
 # Humdrum Grill
 
-A weekend project by Will Johnson and Jenna Rajani.
+A single-page restaurant website coded according to a set of mockup images provided by our client.
+
+Built in one weekend by Will Johnson and Jenna Rajani.
 
 ## Live on Surge at: http://williamjohnsonjr-humdrumgrill.surge.sh
 

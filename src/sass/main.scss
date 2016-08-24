@@ -11,25 +11,26 @@
   display: none;
 }
 
-.container{
-  position: relative;
-}
 
-@import url(http://weloveiconfonts.com/api/?family=fontawesome|maki);
+// Because this import comes from a site that does not use HTTPS,
+// it broke our webpage when people viewed it with an https:// prefix. Added the Font Awesome CDN script to
+// index.html to replace icon functionality in the menu.
+// @import url(http://weloveiconfonts.com/api/?family=fontawesome|maki);
 
-/* fontawesome */
-[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
+// /* fontawesome */
+// [class*="fontawesome-"]:before {
+//   font-family: 'FontAwesome', sans-serif;
+// }
 
-/* maki */
-[class*="maki-"]:before {
-  font-family: 'maki', sans-serif;
-}
+// /* maki */
+// [class*="maki-"]:before {
+//   font-family: 'maki', sans-serif;
+// }
 
 .container {
+  position: relative;
   width: 950px;
-  margin: 0 auto;
+  margin: 0 97px;
 }
 
 header {
@@ -299,6 +300,10 @@ nav {
     border-bottom: solid 1px rgb(179, 179, 179);
     font-weight: 400;
   }
+}
+
+.feature {
+  margin-right: 10px;
 }
 
 .featureHeader {

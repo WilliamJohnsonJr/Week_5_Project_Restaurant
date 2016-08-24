@@ -23,9 +23,9 @@ function getDinner (){
 				<span class="itemName">${menuItem.item}</span><span class="itemPrice">${menuItem.price}</span></p>
 			<div class="itemDescription"><p class="descriptionP">${description}</p>
 				<ul class="buttonsUL">
-					<li class="fontawesome-warning-sign allergies menButton ${menuItem.id}"></li>
-					<li class="fontawesome-star-empty favorite menButton ${menuItem.id}"></li>
-					<li class="maki-fire-station  spicy menButton ${menuItem.id}"></li>
+					<li class="fontawesome-warning-sign"><i class="fa fa-exclamation-triangle allergies menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="fontawesome-star-empty"><i class="fa fa-star favorite menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="maki-fire-station"><i class="fa fa-fire spicy menButton ${menuItem.id}" aria-hidden="true"></i></li>
 					<li class="vegan menButton ${menuItem.id}">V</li>
 				</ul>
 			</div>`);
@@ -85,7 +85,7 @@ function getDinner (){
 						<div class="triangle2">
 						</div>
 					</div>`);		
-				} else {
+				} else if($(event.target).hasClass("vegan")){
 					if(menuItem.vegan == 0){
 						menuItem.vegan = "This item is not vegan-friendly";
 					} else if (menuItem.vegan == 1){
@@ -123,9 +123,9 @@ function getDinner (){
 				<span class="itemName">${menuItem.item}</span><span class="itemPrice">${menuItem.price}</span></p>
 			<div class="itemDescription"><p class="descriptionP">${description}</p>
 				<ul class="buttonsUL">
-					<li class="fontawesome-warning-sign allergies menButton ${menuItem.id}"></li>
-					<li class="fontawesome-star-empty favorite menButton ${menuItem.id}"></li>
-					<li class="maki-fire-station  spicy menButton ${menuItem.id}"></li>
+					<li class="fontawesome-warning-sign"><i class="fa fa-exclamation-triangle allergies menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="fontawesome-star-empty"><i class="fa fa-star favorite menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="maki-fire-station"><i class="fa fa-fire spicy menButton ${menuItem.id}" aria-hidden="true"></i></li>
 					<li class="vegan menButton ${menuItem.id}">V</li>
 				</ul>
 			</div>`);	
@@ -223,10 +223,10 @@ function getDinner (){
 				<span class="itemName">${menuItem.item}</span><span class="itemPrice">${menuItem.price}</span></p>
 			<div class="itemDescription"><p class="descriptionP">${description}</p>
 				<ul class="buttonsUL">
-					<li class="fontawesome-warning-sign allergies menButton item${menuItem.id}"></li>
-					<li class="fontawesome-star-empty favorite menButton item${menuItem.id}"></li>
-					<li class="maki-fire-station  spicy menButton item${menuItem.id}"></li>
-					<li class="vegan menButton item${menuItem.id}">V</li>
+					<li class="fontawesome-warning-sign"><i class="fa fa-exclamation-triangle allergies menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="fontawesome-star-empty"><i class="fa fa-star favorite menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="maki-fire-station"><i class="fa fa-fire spicy menButton ${menuItem.id}" aria-hidden="true"></i></li>
+					<li class="vegan menButton ${menuItem.id}">V</li>
 				</ul>
 			</div>`);	
 			$(".menButton").on('mouseenter', function(event){

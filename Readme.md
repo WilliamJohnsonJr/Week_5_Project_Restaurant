@@ -1,19 +1,14 @@
-#### Week 5 Project - Restaurant Page
+# Humdrum Grill
 
-# **Need to Style `read more>` into the end of latest news `<p>`**
+A single-page restaurant website coded according to a set of mockup images provided by our client.
 
-##### javaScript Tools
-* Used `$.ajax()` to pull images from flickr
-* Used `.addClass` and `.removeClass` to add 'accordion' affect to the menu nav.
+Built in one weekend by Will Johnson and Jenna Rajani.
 
-##### CSS Tools
-* Used to cut off text and add "..." to end of latest news paragraph.
-  ``` CSS
-  display: -webkit-box;
-  
-  -webkit-line-clamp: 9;
-  
-  -webkit-box-orient: vertical;
-  
-  text-overflow: -o-ellipsis-lastline;
-  ```
+## Live on Surge at: https://williamjohnsonjr-humdrumgrill.surge.sh/
+
+Will Johnson: https://github.com/WilliamJohnsonJr
+
+Jenna Rajani: https://github.com/jjrajani
+
+##Tools used:
+HTML, Sass/SCSS, JavaScript, jQuery, AJAX, ES6.

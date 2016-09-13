@@ -104,9 +104,13 @@ function getDinner (){
 					</div>`);
 				};
 				document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
-				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
+				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft + 190)+"px";
 			});
-	
+			// $(".menButton").on('mouseleave', function(event){
+			// 	event.preventDefault();
+			// 	console.log("mouse has left");
+			// 	$(".addOn").remove();
+			// });	
 		});
 		fancyMenu.responseJSON.entrees.forEach(function(menuItem){
 			var description;
@@ -204,9 +208,9 @@ function getDinner (){
 				document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
 				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
 			});
-			$(".menButton").on('mouseleave', function(event){
-					$(".addOn").remove();
-			});		
+			// $(".menButton").on('mouseleave', function(event){
+			// 		$(".addOn").remove();
+			// });		
 		});
 		fancyMenu.responseJSON.sides.forEach(function(menuItem){
 			var description;
@@ -304,9 +308,9 @@ function getDinner (){
 				document.querySelector(".menButtonDiv").style.top = (event.currentTarget.offsetTop + 37)+"px";
 				document.querySelector(".menButtonDiv").style.left = (event.currentTarget.offsetLeft - 190)+"px";
 			});
-			$(".menButton").on('mouseleave', function(event){
-					$(".addOn").remove();
-			});		
+			// $(".menButton").on('mouseleave', function(event){
+			// 		$(".addOn").remove();
+			// });		
 		});
 	});
 };

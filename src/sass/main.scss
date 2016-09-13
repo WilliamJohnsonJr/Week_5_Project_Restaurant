@@ -330,6 +330,9 @@ nav {
     height: 50px;
     letter-spacing: 0.06em;
     justify-content: center;
+    &:hover{
+      cursor: pointer;
+    }
   }
   .story {
     width: 125px;

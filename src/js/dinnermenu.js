@@ -4,6 +4,7 @@ import _ from "lodasH";
 var baseURL = `https://json-data.herokuapp.com/restaurant`
 
 function getDinner (){
+	console.log('Running getDinner');
 	var fancyMenu =  $.ajax({
   	url: `${baseURL}/menu/1`,
   	dataType: 'json',

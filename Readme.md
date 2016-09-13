@@ -1,8 +1,6 @@
 # Humdrum Grill
 
-A single-page restaurant website coded according to a set of mockup images provided by our client.
-
-Built in one weekend by Will Johnson and Jenna Rajani.
+A single-page restaurant website coded according to a set of mockup images provided up-front.
 
 ## Live on Surge at: https://williamjohnsonjr-humdrumgrill.surge.sh/
 

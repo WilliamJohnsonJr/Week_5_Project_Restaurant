@@ -25,11 +25,13 @@ menuBtn.on('click', activate)
 resBtn.on('click', activate)
 
 function showNavLinks(event) {
+  event.preventDefault();
   $(".nav-links").removeClass("hidden")
   $(".show-nav-links").addClass("hidden")
 }
 
 function navActivate(event) {
+  event.preventDefault();
   if (event.target.innerHTML === 'Story') {
     event.preventDefault();
     activateStory();

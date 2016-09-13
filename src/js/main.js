@@ -50,6 +50,15 @@ function navActivate(event) {
 
 $(".nav-link").on('click', navActivate)
 
+
+
+function alertReservation(event) {
+  event.preventDefault();
+  if(confirm("Your reservation has been made.")){
+    window.location.reload();  
+}
+}
+
 activateStory();
 
 function reservationConfirm (event) {
@@ -64,8 +73,19 @@ function reservationConfirm (event) {
 
 $("#reserveTable").on('click', reservationConfirm);
 
+
+$("#reserveTable").on('click', alertReservation)
+
+$("#reserveTable").on('click', alertReservation)
+
 // remove border-bottom and border-arround from featButn
 // add hidden class to all featButn
 // remove hidden from clicked
 // add border-around to clicked
+
 // add border-bottom to not clicked
+// add border-bottom to not clicked
+
+
+// add border-bottom to not clicked
+

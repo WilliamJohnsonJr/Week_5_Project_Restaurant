@@ -1,5 +1,5 @@
 import $ from "jquery";
-import _ from "lodasH";
+import _ from "lodash";
 
 var baseURL = `https://json-data.herokuapp.com/restaurant`
 

@@ -4,14 +4,12 @@ import _ from "lodasH";
 var baseURL = `https://json-data.herokuapp.com/restaurant`
 
 function getDinner (){
-	console.log('Running getDinner');
 	var fancyMenu =  $.ajax({
   	url: `${baseURL}/menu/1`,
   	dataType: 'json',
 	});
 
 	fancyMenu.then(function(){
-		console.log(fancyMenu.responseJSON);
 		fancyMenu.responseJSON.appetizers.forEach(function(menuItem){
 			var description;
 			if( menuItem.description !== ""){

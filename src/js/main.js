@@ -4,7 +4,6 @@ import {news} from "./news.js"
 import {locationHTML} from "./location.js"
 import {getSpecial} from "./specials"
 import {getFood} from "./foodPhotos.js"
-// import {getImg} from "./featureImg.js"
 import {getDinner} from "./dinnermenu"
 import {ourStoryBtn, menuBtn, resBtn, ourStory, menu, reservation, activate, activateStory, activateMenu, activateReservation} from "./menu-nav.js"
 var baseURL = `https://api.flickr.com/services/`

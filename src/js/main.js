@@ -50,42 +50,20 @@ function navActivate(event) {
 
 $(".nav-link").on('click', navActivate)
 
-
-
-function alertReservation(event) {
-  event.preventDefault();
-  if(confirm("Your reservation has been made.")){
-    window.location.reload();  
-}
-}
-
 activateStory();
 
 function reservationConfirm (event) {
   event.preventDefault();
+  $(".reservationError").remove();
   if ($("#fullName").val() !== "" && $("#guests").val() !== ""  && $("#date") !== "") {
-     $(".reservations").append(`<div>Your reservation has been confirmed!</div>`)
+    $(".reservations").append(`<div>Your reservation has been confirmed!</div>`)
+    function timer (){
+      window.location.reload()
+    };
+    window.setTimeout(timer, 3000);
   } else {
-    $(".reservations").append(`<div>Please fill in your name, number of guests, and date. (required)`)
+    $(".reservations").append(`<div class="reservationError">Please fill in your name, number of guests, and date. (required)`)
   }
 };
 
-
 $("#reserveTable").on('click', reservationConfirm);
-
-
-$("#reserveTable").on('click', alertReservation)
-
-$("#reserveTable").on('click', alertReservation)
-
-// remove border-bottom and border-arround from featButn
-// add hidden class to all featButn
-// remove hidden from clicked
-// add border-around to clicked
-
-// add border-bottom to not clicked
-// add border-bottom to not clicked
-
-
-// add border-bottom to not clicked
-
